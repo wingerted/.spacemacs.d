@@ -46,14 +46,16 @@ values."
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
-     spell-checking
-     syntax-checking
-     version-control
+     ;;spell-checking
+     (syntax-checking :variables
+                      syntax-checking-enable-tooltips nil)
+     (version-control :variables
+                      version-control-diff-tool 'diff-hl)
      ranger
      ansible
      docker
      (dash :variables
-           dash-helm-dash-docset-path "~/.emacs.d/private/docset"
+           helm-dash-docset-newpath "~/.spacemacs.d/docset"
            helm-dash-browser-func 'eww)
      ibuffer
      semantic
@@ -68,8 +70,6 @@ values."
      shell-scripts
      cscope
      (c-c++ :variables
-            c-c++-enable-google-style t
-            c-c++-enable-google-newline t
             c-c++-enable-clang-support t
             c-c++-default-mode-for-headers 'c++-mode)
      asciidoc
@@ -347,18 +347,4 @@ you should place your code here."
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (rtags cmake-ide levenshtein web-mode web-beautify tagedit slim-mode scss-mode sass-mode ranger pug-mode phpunit phpcbf php-extras php-auto-yasnippets livid-mode skewer-mode simple-httpd less-css-mode js2-refactor multiple-cursors js2-mode js-doc insert-shebang helm-dash helm-css-scss haml-mode fish-mode emmet-mode drupal-mode php-mode dockerfile-mode docker json-mode tablist docker-tramp json-snatcher json-reformat define-word dash-at-point company-web web-completion-data company-tern dash-functional tern company-shell coffee-mode adoc-mode markup-faces yapfify yaml-mode xterm-color ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org stickyfunc-enhance srefactor spaceline smeargle shell-pop reveal-in-osx-finder restart-emacs rainbow-delimiters pyvenv pytest pyenv-mode py-isort popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-projectile org-present org-pomodoro org-plus-contrib org-download org-bullets open-junk-file neotree mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum live-py-mode linum-relative link-hint launchctl jinja2-mode info+ indent-guide ibuffer-projectile hy-mode hungry-delete htmlize hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-gtags helm-gitignore helm-flx helm-descbinds helm-cscope helm-company helm-c-yasnippet helm-ag google-translate google-c-style golden-ratio gnuplot gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md ggtags flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help elisp-slime-nav dumb-jump disaster diff-hl cython-mode company-statistics company-c-headers company-ansible company-anaconda column-enforce-mode cmake-mode clean-aindent-mode clang-format auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile ansible-doc ansible aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 )
